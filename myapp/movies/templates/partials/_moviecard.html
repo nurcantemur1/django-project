@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="card mb-4" style="width: 18rem">
+    <img
+      src="{% static 'img/'|add:m.image %}"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <p class="card-text">{{m.name}}</p>
+
+      <p class="card-text">{{m.descriptions}}</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="{% url 'details' m.id %}" class="btn me-md-2" type="button ">Detail</a>
+      </div>
+    </div>
+  </div>
